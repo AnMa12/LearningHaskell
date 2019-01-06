@@ -15,6 +15,9 @@ halfEvenListEq (h : t)
     | otherwise = t'
     where t' = halfEvenListEq t
     
+halfEvenListDescr :: [Int] -> [Int]
+halfEvenListDescr l = [ x `div` 2 | x <- l, even x]
+    
     
 -- shows the numbers from the list which are in min max interval  
 inIntervalNumber :: Int -> Int -> Int ->  Bool
@@ -37,3 +40,7 @@ inIntervalEq min max (h : t)
     | h >= min && h <= max = h : t'
     | otherwise = t'
     where t' = inIntervalEq min max t
+    
+-- again the same thing but with list descriptions
+inIntervalDescr :: Int -> Int -> [Int] -> [Int]
+inIntervalDescr min max l = [ x | x <- l, x >= min && x <= max]
