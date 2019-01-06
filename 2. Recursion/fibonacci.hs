@@ -8,3 +8,7 @@ fibonacciEcuations 0 = 0
 fibonacciEcuations 1 = 1
 fibonacciEcuations 2 = 1
 fibonacciEcuations n = fibonacciEcuations (n-1) + fibonacciEcuations (n - 2)
+
+fiobancciPair :: Integer -> Integer -> Integer
+fibonacciPair x y
+     
